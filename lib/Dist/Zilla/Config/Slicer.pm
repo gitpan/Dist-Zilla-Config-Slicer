@@ -12,7 +12,7 @@ use warnings;
 
 package Dist::Zilla::Config::Slicer;
 {
-  $Dist::Zilla::Config::Slicer::VERSION = '0.100';
+  $Dist::Zilla::Config::Slicer::VERSION = '0.200';
 }
 BEGIN {
   $Dist::Zilla::Config::Slicer::AUTHORITY = 'cpan:RWSTAUNER';
@@ -39,7 +39,7 @@ __END__
 =pod
 
 =for :stopwords Randy Stauner ACKNOWLEDGEMENTS cpan testmatrix url annocpan anno bugtracker
-rt cpants kwalitee diff irc mailto metadata placeholders
+rt cpants kwalitee diff irc mailto metadata placeholders metacpan
 
 =encoding utf-8
 
@@ -49,14 +49,14 @@ Dist::Zilla::Config::Slicer - Config::MVP::Slicer customized for Dist::Zilla
 
 =head1 VERSION
 
-version 0.100
+version 0.200
 
 =head1 SYNOPSIS
 
   my $slicer = Dist::Zilla::Config::Slicer->new({
     config => $section->{payload},
   });
-  
+
   $slicer->merge($plugin);
 
 =head1 DESCRIPTION
@@ -78,7 +78,19 @@ L<Config::MVP::Slicer>
 
 =item *
 
-L<Dist::Zilla::Role::PluginBundle::ConfigSlicer>
+L<Dist::Zilla::Role::PluginBundle::Config::Slicer>
+
+A role to consume in your own C<PluginBundle>
+to automatically enable config slicing.
+
+=item *
+
+L<Dist::Zilla::PluginBundle::ConfigSlicer>
+
+A C<PluginBundle> that combines L<< @Filter|Dist::Zilla::PluginBundle::Filter >>
+with L<Dist::Zilla::Role::PluginBundle::Config::Slicer|Dist::Zilla::Role::PluginBundle::Config::Slicer>
+so you can override the configuration for a bundle
+that doesn't have config slicing built in.
 
 =back
 

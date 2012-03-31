@@ -27,13 +27,14 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::Config::Slicer",
   "PREREQ_PM" => {
     "Config::MVP::Slicer" => 0,
+    "Dist::Zilla::PluginBundle::Filter" => 0,
     "Dist::Zilla::Util" => 4,
     "Moose" => 0,
     "Moose::Role" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.100",
+  "VERSION" => "0.200",
   "test" => {
     "TESTS" => "t/*.t"
   }

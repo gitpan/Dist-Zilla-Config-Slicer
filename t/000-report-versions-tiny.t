@@ -49,6 +49,7 @@ sub pmver {
 }
 
 eval { $v .= pmver('Config::MVP::Slicer','any version') };
+eval { $v .= pmver('Dist::Zilla::PluginBundle::Filter','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::PluginBundle','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::PluginBundle::Easy','any version') };
 eval { $v .= pmver('Dist::Zilla::Util','4') };

@@ -12,7 +12,7 @@ use warnings;
 
 package Dist::Zilla::Role::PluginBundle::Config::Slicer;
 {
-  $Dist::Zilla::Role::PluginBundle::Config::Slicer::VERSION = '0.100';
+  $Dist::Zilla::Role::PluginBundle::Config::Slicer::VERSION = '0.200';
 }
 BEGIN {
   $Dist::Zilla::Role::PluginBundle::Config::Slicer::AUTHORITY = 'cpan:RWSTAUNER';
@@ -56,7 +56,7 @@ Dist::Zilla::Role::PluginBundle::Config::Slicer - Pass Portions of Bundle Config
 
 =head1 VERSION
 
-version 0.100
+version 0.200
 
 =head1 SYNOPSIS
 
@@ -118,6 +118,10 @@ L<Dist::Zilla::Role::PluginBundle>
 =item *
 
 L<Dist::Zilla::Role::PluginBundle::Easy>
+
+=item *
+
+L<Dist::Zilla::PluginBundle::ConfigSlicer>
 
 =back
 
